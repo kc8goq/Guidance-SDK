@@ -14,7 +14,7 @@
 #ifdef WIN32
 #define UART_PORT "COM5"
 #else
-#define UART_PORT 0 
+#define UART_PORT 2
 #endif
 
 int main()

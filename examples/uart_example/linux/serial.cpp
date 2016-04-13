@@ -122,7 +122,7 @@ int uart_config(int fd, int nSpeed, int nBits, char nEvent, int nStop)
 
 int connect_serial(char port, int baudrate)
 {// currently only support baud rate 115200
-	const char *arm_path[] = { "/dev/ttyUSB0", "/dev/ttyUSB1", "/dev/ttyUSB2" };
+	const char *arm_path[] = { "/dev/ttyTHS0", "/dev/ttyTHS1", "/dev/ttyTHS2" };  //modified for Manifold.  Would be better to pass in the device name..
 
 	g_sdk_uart_fd = open(arm_path[port], O_RDWR | O_NOCTTY);
 	if (g_sdk_uart_fd < 0)
